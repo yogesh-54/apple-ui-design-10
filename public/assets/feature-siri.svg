@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 480" width="100%" height="100%">
+  <defs>
+    <radialGradient id="siriOrb" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="25%" stop-color="#00f2fe"/>
+      <stop offset="50%" stop-color="#4facfe"/>
+      <stop offset="75%" stop-color="#f093fb"/>
+      <stop offset="100%" stop-color="#f5576c"/>
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="15" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="400" height="480" fill="#ffffff" rx="28"/>
+  <rect x="30" y="30" width="340" height="420" rx="20" fill="#fbfbfd" stroke="#e5e5ea" stroke-width="1.5"/>
+
+  <!-- Siri Glowing Orb in Center -->
+  <circle cx="200" cy="200" r="75" fill="url(#siriOrb)" filter="url(#glow)"/>
+  <circle cx="200" cy="200" r="60" fill="url(#siriOrb)" opacity="0.9"/>
+  <path d="M160 200c20-25 60 25 80 0" stroke="#ffffff" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.8"/>
+
+  <!-- Siri notification banner -->
+  <rect x="70" y="300" width="260" height="60" rx="16" fill="#f2f2f7" stroke="#e5e5ea"/>
+  <text x="90" y="325" font-family="-apple-system, Inter, sans-serif" font-weight="600" font-size="12" fill="#1d1d1f">Siri</text>
+  <text x="90" y="343" font-family="-apple-system, Inter, sans-serif" font-weight="400" font-size="11" fill="#6e6e73">“Read my unread messages”</text>
+
+  <text x="200" y="405" text-anchor="middle" font-family="-apple-system, Inter, sans-serif" font-weight="600" font-size="16" fill="#1d1d1f">Just say “Siri” or “Hey Siri”</text>
+</svg>
